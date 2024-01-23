@@ -2,7 +2,7 @@ import generating as g
 import pandas as pd
 
 
-def one_hot_presentation(data):
+def get_one_hot_presentation(data):
     labels = sorted(list(data[g.COL_NAME].unique()))
     labels_matching = []
     for label in labels:
@@ -12,5 +12,5 @@ def one_hot_presentation(data):
 
 
 # для проверки эквивалентности результата работы программы результату использования pandas.get_dummies:
-# data = g.gen()
-# print(one_hot_presentation(data).equals(pd.get_dummies(data[g.COL_NAME])))
+data = g.df_gen()
+print(get_one_hot_presentation(data).equals(pd.get_dummies(data[g.COL_NAME])))
