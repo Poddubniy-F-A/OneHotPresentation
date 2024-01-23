@@ -12,5 +12,5 @@ def one_hot_presentation(data):
 
 
 # для проверки эквивалентности результата работы программы результату использования pandas.get_dummies:
-# sdata = g.gen()
+# data = g.gen()
 # print(one_hot_presentation(data).equals(pd.get_dummies(data[g.COL_NAME])))
